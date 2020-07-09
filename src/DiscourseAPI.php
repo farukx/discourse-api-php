@@ -69,16 +69,6 @@ class DiscourseAPI {
 		$this->_protocol          = $protocol;
 	}
 
-
-    public function fPassword(
-		string $login
-	) {
-		$params = [
-			'login'                  => $login
-		];
-
-		return $this->_postRequest( '/session/forgot_password', [ $params ] );
-	}
 	////////////////  Groups
 
 	/**
@@ -1312,4 +1302,18 @@ class DiscourseAPI {
 
 		return $res;
 	}
+    /**
+    Forgot Password
+    *Forgot Password.
+    * @$login string $login: Enter either the email address.
+    * @throws Exception
+    */
+     public function fPassword(string $login) {
+		$params = [
+			'login'                  => $login
+		];
+		return $this->_postRequest( '/session/forgot_password', [ $params ] );
+	}
+    
+    
 }
