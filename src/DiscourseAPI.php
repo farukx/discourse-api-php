@@ -1311,7 +1311,7 @@ class DiscourseAPI {
      public function fPassword(string $login) {
 		$params = [
 			'login'                  => $login
-		];
+		]; 
 		return $this->_postRequest( '/session/forgot_password', [ $params ] );
 	}
     
